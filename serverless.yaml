@@ -1,0 +1,21 @@
+service: pulsar-poc
+frameworkVersion: "3"
+
+plugins:
+  - serverless-dotenv-plugin
+  
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: eu-central-1
+  memorySize: 128
+  environment:
+    STAGE: "${opt:stage, self:provider.stage}"
+
+functions:
+  app:
+    handler: handler.app
+    events:
+      - httpApi:
+          path: /
+          method: post

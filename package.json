@@ -1,0 +1,20 @@
+{
+  "name": "pulsar-on-lambda",
+  "version": "1.0.0",
+  "description": "Serverless aws-nodejs-typescript template",
+  "main": "handler.js",
+  "scripts": {
+    "deploy:staging": "serverless deploy --stage staging",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "pulsar-client": "1.8.0",
+    "serverless": "3.23.0",
+    "serverless-offline": "^8.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.25",
+    "serverless-dotenv-plugin": "4.0.2"
+  },
+  "license": "MIT"
+}
